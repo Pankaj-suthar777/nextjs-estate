@@ -19,15 +19,15 @@ function ListPage() {
   return (
     <div className="max-h-[88vh] text-center w-full flex overflow-hidden relative">
       <div className="">
-        <div className="pr-3 h-full flex flex-col overflow-auto">
+        <div className="h-full flex gap-y-2 flex-col overflow-auto">
           <Filter />
           {data.map((item) => (
             <Card key={item.id} item={item} />
           ))}
         </div>
       </div>
-      <div className="hidden w-[60%] h-full overflow-hidden  md:block bg-[#fcf5f3]">
-        <Map items={data} height={"h-[90vh]"} />
+      <div className="hidden w-[60%] h-full  overflow-hidden  md:block">
+        <Map items={data} height={"h-[88vh]"} />
       </div>
 
       <div className="absolute sm:hidden bottom-16 left-0 right-0">

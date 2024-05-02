@@ -9,7 +9,7 @@ function Map({ items, height }) {
         center={[52.4797, -1.90269]}
         zoom={7}
         scrollWheelZoom={false}
-        className={`${height} w-full rounded-xl`}
+        className={`${height} z-0 w-full rounded-xl`}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

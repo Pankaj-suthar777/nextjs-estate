@@ -21,15 +21,24 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { SlidersHorizontal } from "lucide-react";
+import SearchInput from "../SearchInput";
 
 const MobileFilter = () => {
   return (
-    <div>
+    <div className="flex p-2">
       <Drawer>
-        <DrawerTrigger className="justify-end w-full flex">
+        {/* <Input
+          id="city"
+          name="city"
+          placeholder="City Location"
+          className="w-full mr-4"
+        /> */}
+        <div className="mr-2 w-full">
+          <SearchInput />
+        </div>
+        <DrawerTrigger className="">
           <Button>
-            <SlidersHorizontal className="mr-2" />
-            Filters
+            <SlidersHorizontal />
           </Button>
         </DrawerTrigger>
         <DrawerContent>
@@ -37,9 +46,6 @@ const MobileFilter = () => {
             <DrawerTitle className="mb-2">Filters</DrawerTitle>
           </DrawerHeader>
           <div className="flex flex-col px-5">
-            <div>
-              <Input id="city" name="city" placeholder="City Location" />
-            </div>
             <div className="w-full flex gap-x-4 mt-2">
               <Select>
                 <SelectTrigger className="w-full">
